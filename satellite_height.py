@@ -65,16 +65,16 @@ def compute_apogee_over_time(tle_lines, days=180, observer_lat=0, observer_lon=0
 def plot_apogee(times, heights, satellite_name, days):
     # Plot the apogee height over time.
     plt.figure(figsize=(10, 5))
-    plt.plot(times, heights, label=f'{satellite_name} Apogee height')
+    plt.plot(times, heights, label=f'{satellite_name} height')
     plt.xlabel('Date')
-    plt.ylabel('Apogee height (km)')
-    plt.title(f'Apogee height of {satellite_name} over {days} days')
+    plt.ylabel('Height in km')
+    plt.title(f'Max AOS/LOS height of {satellite_name} for an observer on earth over {days} days')
     plt.legend()
     plt.grid()
     plt.show()
 
 if __name__ == "__main__":
-    satellite_name = "NOAA 15" #"RADFXSAT (FOX-1B)"#"FUNCUBE-1 (AO-73)"#"EYESAT A (AO-27)" # "OSCAR 7 (AO-7)"#"RS-44 & BREEZE-KM R/B"  # Example satellite
+    satellite_name = "EYESAT A (AO-27)" #"SAUDISAT 1C (SO-50)" #"RADFXSAT (FOX-1B)"#"FUNCUBE-1 (AO-73)"#"EYESAT A (AO-27)" # "OSCAR 7 (AO-7)"#"RS-44 & BREEZE-KM R/B"  # Example satellite
     observer_lat = 49.24
     observer_lon = 7.0
     observer_alt = 400
